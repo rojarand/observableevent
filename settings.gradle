@@ -8,5 +8,5 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "ObservableEvent"
-include ':app'
+include ':library'
 include ':app:observableevent'
