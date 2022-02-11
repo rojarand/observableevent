@@ -31,7 +31,7 @@ dependencies {
 }
 
 group = 'com.github.rojarand'
-version = '0.0.5'
+version = '0.0.6'
 
 afterEvaluate {
     publishing {
@@ -41,7 +41,7 @@ afterEvaluate {
                 from components.release
                 groupId = 'com.github.rojarand'
                 artifactId = 'observableevent'
-                version = '0.0.5'
+                version = '0.0.6'
             }
         }
     }
