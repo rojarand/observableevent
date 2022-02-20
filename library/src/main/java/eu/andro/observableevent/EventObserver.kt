@@ -17,6 +17,7 @@ class Event<T>(val payload: T) {
 }
 
 open class MutableEventLiveData<T> : MutableLiveData<Event<T>>() {
+    
     fun postEvent(value: T) {
         super.postValue(Event(value))
     }
