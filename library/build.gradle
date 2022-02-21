@@ -30,8 +30,12 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 }
 
+/*
+To check publishing log:
+https://jitpack.io/com/github/rojarand/observableevent/[TAG or commit]/build.log
+*/
 group = 'com.github.rojarand'
-version = '0.0.6'
+version = '0.0.7'
 
 afterEvaluate {
     publishing {
@@ -41,7 +45,7 @@ afterEvaluate {
                 from components.release
                 groupId = 'com.github.rojarand'
                 artifactId = 'observableevent'
-                version = '0.0.6'
+                version = '0.0.7'
             }
         }
     }
