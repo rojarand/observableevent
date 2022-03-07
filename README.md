@@ -54,7 +54,7 @@ allprojects {
 2. In app `build.gradle` (module level), add the dependency
 ```
 dependencies {
-    implementation 'com.github.rojarand:observableevent:0.0.7'
+    implementation 'com.github.rojarand:observableevent:0.1.0'
 }
 ```
 
