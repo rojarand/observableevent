@@ -1,6 +1,8 @@
 ## ObservableEvent
 `ObservableEvent` is the missing piece of code in the Android MVVM code base. Thanks to `ObservableEvent` you can easly process events only once.
 
+### Example
+
 Let say that you present errors in the following manner:
 
 ```kotlin
@@ -91,17 +93,7 @@ class MyActivity : AppCompatActivity() {
 }
 ```
 
-In case of multiple `Observers` observe an event live data variable, you need to specify string keys to distinguish which `Observer` was already notified. Keys should be unique per the event live data variable.
-
-```kotlin
-...
-viewModel.errorMessage.observe(this, EventObserver(key = "a key1") { message ->
-    showAlert(message)
-})
-...
-```
-
-If you want have a simple event live data without specifying an event class you can use `SimpleEventLiveData` class.
+If you want have a `void` event live data without specifying an event class you can use `SimpleEventLiveData` class. `SimpleEventLiveData` does not carry any data.
 
 ```kotlin
 //ViewModel
