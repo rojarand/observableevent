@@ -28,7 +28,7 @@ open class MutableEventLiveData<T> : MutableLiveData<Event<T>>() {
 
 typealias EventLiveData<T> = LiveData<Event<T>>
 
-class EventObserver<T>(private val key: String = "", private val deliveryCallback: (t: T) -> Unit) :
+class EventObserver<T>(private val key: String = generateKey(), private val deliveryCallback: (t: T) -> Unit) :
     Observer<Event<T>> {
 
     override fun onChanged(e: Event<T>) {
@@ -37,7 +37,15 @@ class EventObserver<T>(private val key: String = "", private val deliveryCallbac
             e.markAsDeliveredFor(this.key)
         }
     }
+
+    companion object {
+        private fun generateKey(): String {
+            val stackTraceElement = Thread.currentThread().stackTrace[5]
+            return "${stackTraceElement.lineNumber}@${stackTraceElement.fileName}"
+        }
+    }
 }
+
 
 class SimpleEventLiveData: MutableEventLiveData<Void?>() {
     fun fire() = postEvent(null)
