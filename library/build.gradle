@@ -35,7 +35,7 @@ To check publishing log:
 https://jitpack.io/com/github/rojarand/observableevent/[TAG or commit]/build.log
 */
 group = 'com.github.rojarand'
-version = '0.0.7'
+version = '0.1.0'
 
 afterEvaluate {
     publishing {
@@ -45,7 +45,7 @@ afterEvaluate {
                 from components.release
                 groupId = 'com.github.rojarand'
                 artifactId = 'observableevent'
-                version = '0.0.7'
+                version = '0.1.0'
             }
         }
     }
